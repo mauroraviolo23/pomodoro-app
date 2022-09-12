@@ -19,4 +19,6 @@ dado que presentaba algunos errores que hacían que la experiencia de uso no fue
 Les invito a incorporar "Pomodoro" a sus rutinas de trabajo o estudio, ya sea utilizando esta aplicación o descargando
 una en sus celulares. 
 
+Pueden ver el deploy de este proyecto y también usarlo ingresando a https://mauroraviolo23.github.io/pomodoro-app/ 
+
 Gracias por leer.
