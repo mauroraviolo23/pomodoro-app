@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/d2eba12867.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Pomodoro Timer ⌚</h1>
+    </header>
+    <div class="main-container">
+        <main>
+            <div class="clock">
+                <div class="clock-mins">25</div>
+                <div>:</div>
+                <div class="clock-secs">00</div>
+                <audio src="https://soundbible.com/mp3/service-bell_daniel_simion.mp3">
+                </audio>
+                <svg 
+                class="progress-ring"
+                height="300"
+                width="300">
+                    <circle 
+                    class="progress-ring-circle"
+                    stroke-width="10"
+                    fill="rgba(7, 50, 243, 0.15)"
+                    r="110"
+                    cx="145"
+                    cy="145"
+                    />
+                </svg>
+            </div>
+            <div class="btn-group">
+                <button class="start">Start Focus</button>
+                <button class="pause">Pause</button>
+                <button class="reset">Reset</button>
+            </div>
+        </main>
+        <aside>
+            <form action=".">
+                <label for="focusTime">set focus time</label>
+                <input type="number" value="25" name="focusTime" id="focusTime" min="1" />
+                <label for="breakTime">set break time</label>
+                <input type="number" value="5" name="breakTime" id="breakTime" min="1"/>
+                <button type="submit">Save settings</button>
+            </form>
+        </aside>
+    </div>
+    
+    
+
+
+
+
+    <script src="js/progress.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/timer.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600&display=swap');
+
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+}
+
+body {
+    height: 100vh;
+    padding: 10vh;
+
+    background: rgb(243, 243, 243);
+    color: #131313;
+    font-family: 'Source Code Pro', monospace;
+}
+
+@media (min-height: 750px) {
+    body {
+        padding: 10vh;
+    }
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+}
+
+input {
+    transition: 0.5s ease-in-out;
+    margin: 0 0 12.5px 0;
+    font-size: 18px;
+    padding: 5px;
+    background: rgba(7, 50, 243, 0.15);
+    border: none;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    transition: all 0.15s;
+}
+
+label {
+    font-size: 15px;
+}
+
+form {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    max-width: 370px;
+    margin: 5px auto;
+    
+}
+
+form button {
+    border-radius: 16px;
+    background: rgb(14, 40, 159);
+    width: 100%;
+    margin: 5px 0;
+    color: white;
+    cursor: pointer; 
+}
+
+form button:active {
+    background-color: rgba(14, 40, 159, 0.75);;
+} 
+
+.start {
+    background: rgb(22, 255, 173);
+    color: #000000;
+    border-radius: 16px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.break {
+    background: rgb(0, 199, 116);
+    color: #000000;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.reset {
+    background: rgb(251, 113, 237);
+    color: #000000;
+    border-radius: 16px;
+    width: 100px;
+    cursor: pointer;
+    transition: 0.25 all;
+}
+
+.reset:active {
+    background: rgba(251, 113, 237, 0.75);
+}
+
+.pause {
+    background: rgb(109, 222, 237);
+    border-radius: 16px;
+    width: 100px;
+    cursor: pointer;
+    transition: 0.25 all;
+}
+
+.resume {
+    background: rgb(177, 234, 241);
+    cursor: pointer;
+}
+
+.clock {
+    padding: 3px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    height: 300px;
+    font-size: 30px;
+}
+
+.clock-mins, .clock-secs {
+    font-size: 32px;
+}
+
+
+.progress-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+}
+
+.progress-ring-circle {
+    transition: 0.5s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke: rgb(14, 40, 159);
+}
+
+.danger {
+    stroke: rgb(255, 122, 175);
+    animation: pulse 1s linear 10;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: rotate(-90deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(-90deg) scale(1.02);
+    }
+
+    75% {
+        transform: rotate(-90deg) scale(0.98);
+    }
+}
+
+.not-clickable {
+    cursor: not-allowed;
+    color: #000000;
+}
+
+.not-clickable:hover {
+    background-color: #a8a2a2;
+}
+
+aside {
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 915px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    .main-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto 0;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    aside {
+        margin: 0;
+    }
+}
